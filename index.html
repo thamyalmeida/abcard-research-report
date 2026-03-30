@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -839,6 +840,7 @@ body.has-sidenav .dash{margin-left:200px}
 </div></div><!-- end pane-negadas -->
 
 <div class="pane" id="pane-overview"><div class="dash">
+  <div class="section" id="so-participantes">Participantes das entrevistas</div>
     <div class="ov-grid">
 
       <div class="sc">
@@ -973,6 +975,7 @@ body.has-sidenav .dash{margin-left:200px}
 
   <!-- COMPARISON TABLE -->
 <div class="pane" id="pane-table"><div class="dash">
+  <div class="section" id="st-tabela">Comparativo de jornadas</div>
 
     <div class="tbl-filters">
       <div class="filter-group">
@@ -2051,6 +2054,12 @@ const PANE_NAVS = {
     {id:'si-fatura',      label:'Tela da fatura'},
     {id:'si-sucesso',     label:'Telas de sucesso'},
     {id:'si-conclusoes',  label:'Conclusões'},
+  ],
+  'overview': [
+    {id:'so-participantes', label:'Participantes'},
+  ],
+  'table': [
+    {id:'st-tabela', label:'Comparativo'},
   ],
   'metodo': [
     {id:'sm-visao',         label:'Visão geral'},

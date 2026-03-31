@@ -527,7 +527,6 @@ body.has-sidenav .dash{margin-left:200px}
 <div class="top-tabs">
   <button class="top-tab active" onclick="showPane('resumo',this)">Resumo executivo</button>
   <button class="top-tab" onclick="showPane('quanti',this)">Dados transacionais &amp; atitudinais</button>
-  <button class="top-tab" onclick="showPane('negadas',this)">Compras negadas</button>
   <button class="top-tab" onclick="showPane('overview',this)">Entrevistados</button>
   <button class="top-tab" onclick="showPane('table',this)">Jornada</button>
   <button class="top-tab" onclick="showPane('interface',this)">Interface</button>
@@ -794,6 +793,186 @@ body.has-sidenav .dash{margin-left:200px}
         <div class="card"><div class="tag t-lg">LG</div><div class="chart-headline">"Aprender crédito sem dívidas" — argumento que o app não comunica</div><div class="card-title">Argumento usado para incentivar <span class="n-label">LG que incentivaram n=115</span></div><div class="chart-wrap" style="height:160px"><canvas id="c-argumento"></canvas></div><div class="interp" id="i-argumento"></div></div>
     <div class="card"><div class="tag t-lg">LG — incentivadores</div><div class="chart-headline">O LG incentiva, mas não sabe orientar: 64% erra o limite e 59% erra a Caixinha</div><div class="card-title">Entendimento dos incentivadores sobre mecânica do produto <span class="n-label">LG incentivadores n=73</span></div><div class="chart-wrap" style="height:120px"><canvas id="c-incent-gap"></canvas></div><div class="interp" id="i-incent-gap"></div></div>
   </div>
+
+<div class="section" id="sq-motivos">Motivos percebidos das compras negadas</div>
+
+  <div class="grid">
+    <div class="card">
+      <div class="tag t-cross">U18 × status</div>
+      <div class="chart-headline">"Esperava limite sem depositar" confirma a Hipótese 3</div><div class="card-title">Por qual motivo você acha que a compra foi negada? <span class="n-label">U18 ativos n=54 · inativos n=21</span></div>
+      <div class="chart-wrap" style="height:200px"><canvas id="c-motivo-negada"></canvas></div>
+      <div class="interp" id="i-motivos-neg"></div>
+    </div>
+    <div class="card">
+      <div class="tag t-cross">U18 × status</div>
+      <div class="chart-headline">Menos de 30% percebe compras negadas — a maioria acontece em segundo plano</div>
+      <div class="card-title">Você já teve compra negada? <span class="n-label">U18 ativos n=186 · inativos n=89</span></div>
+      <div class="chart-wrap" style="height:120px"><canvas id="c-negada-sim-nao"></canvas></div>
+      <div class="interp" id="i-negada-sim-nao"></div>
+    </div>
+  </div>
+
+  
+<div class="section" id="sq-hipoteses">Hipóteses sobre as causas das negadas</div>
+
+  <div class="grid">
+    <div class="card" style="grid-column:1/-1">
+      <div class="neg-hypothesis-grid">
+
+        <div class="hyp-group-label">✅ Hipótese do research plan — confirmada em campo</div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;grid-column:1/-1">
+<div class="neg-hyp neg-hyp--confirmed">
+          <div class="neg-hyp-icon">✅</div>
+          <div class="hyp-badge hyp-badge--confirmed">✅ Hipótese 1 — Confirmada</div>
+          <div class="neg-hyp-title">Depósito baixo como comportamento de teste, não por falta de renda</div>
+          <div class="neg-hyp-body">O depósito mediano inicial não reflete ausência de dinheiro, mas ausência de confiança no mecanismo "guardar para ter limite". O U18 — ou o próprio LG — deposita um valor mínimo apenas para validar se o produto funciona, sem adotá-lo como carteira principal. O produto ainda não é percebido como algo a ser adotado, mas como algo a ser testado.</div>
+          <div class="neg-hyp-evidence">
+            <span>Evidência quanti:</span> 55% dos ativos e 57% dos inativos declararam ter depositado um valor menor "só para testar se o cartão funcionava mesmo" — o comportamento dominante em ambos os grupos.<br><br>
+            <span>Evidência quali:</span>
+            <div class="quote-chip" style="margin:6px 0 4px">💬 "É, fiz para testar mesmo. Coloquei 1 real, depois botei mais 4, pra dar 5. Fui na farmácia da minha vó e peguei um chiclete de 2 reais. Aproximei o telefone e passou, no crédito." — Davi (S1, ativo)</div>
+            <div class="quote-chip" style="margin:4px 0 8px">💬 "Eu acho que tinha que colocar um dinheiro mínimo de R$ 50. Eu não lembro exatamente, mas aí eu fiz uma compra lá só para testar o cartão de R$ 3. Comprei um Halls e tava funcionando." — Davi (S5, ativo)</div>
+            <span>Status:</span> <strong style="color:var(--teal)">Confirmada</strong> — padrão de primeiro depósito como teste dominante em ativos e inativos; único caso sem gap aprendeu a mecânica previamente por canal externo.
+          </div>
+        </div>
+
+        <div class="neg-hyp neg-hyp--confirmed">
+          <div class="neg-hyp-icon">✅</div>
+          <div class="hyp-badge hyp-badge--confirmed">✅ Hipótese 2 — Confirmada</div>
+          <div class="neg-hyp-title">Confusão entre saldo total na conta e limite disponível no ABCard</div>
+          <div class="neg-hyp-body">A alta taxa de compras negadas tem vários motivos, entre eles, a confusão entre o saldo total na conta Nubank e o limite disponível no cartão — que depende exclusivamente do valor depositado na Caixinha. O usuário assume que, se há dinheiro no Nubank, o cartão deveria passar.</div>
+          <div class="neg-hyp-evidence">
+            <span>Evidência quanti:</span> Entre ativos com entendimento errado do limite: quem acha que "o limite é o saldo da conta" acumula média de 28,9 negadas vs 17,3 de quem entende corretamente — 67% a mais. Adicionalmente, 20,4% dos ativos com negada percebida reportam "tinha dinheiro na conta, mas não estava na Caixinha" como motivo direto.<br><br>
+            <span>Status:</span> <strong style="color:var(--teal)">Confirmada quantitativamente</strong> — o dado transacional mostra que o entendimento errado do limite prediz diretamente o volume de negadas, e 20,4% dos ativos identificam explicitamente o gap de localização como motivo. A hipótese não encontrou confirmação direta nas sessões qualitativas — nenhum participante relatou explicitamente ter tentado uma compra acreditando que o saldo da conta cobriria o limite do cartão.
+          </div>
+        </div>
+
+        <div class="neg-hyp neg-hyp--confirmed">
+          <div class="neg-hyp-icon">✅</div>
+          <div class="hyp-badge hyp-badge--confirmed">✅ Hipótese 3 — Confirmada</div>
+          <div class="neg-hyp-title">Expectativa de crédito convencional ("esperava limite sem depositar")</div>
+          <div class="neg-hyp-body">Parte dos usuários tenta usar o cartão esperando que o Nubank conceda um limite pré-aprovado — sem precisar depositar nada — replicando a lógica do crédito convencional. Quando a compra é negada, não entendem o motivo. Para parte dos inativos, esse é o gatilho do abandono: descobrem que precisam guardar o próprio dinheiro e rejeitam o produto como "crédito falso".</div>
+          <div class="neg-hyp-evidence">
+            <span>Evidência quanti:</span> 37% dos ativos e 39% dos inativos com negada percebida apontam "achei que o Nubank me daria um limite sem precisar depositar" como motivo — o dado mais prevalente em ambos os grupos.<br><br>
+            <span>Evidência quali:</span>
+            <div class="quote-chip" style="margin:6px 0 4px">💬 "Eu já tenho um cartão virtual de débito — é praticamente a mesma coisa" — Nicole (S2, inativa), após entender que o limite era o próprio dinheiro dela</div>
+            <div class="quote-chip" style="margin:4px 0 4px">💬 "Fiquei toda feliz... aí fui ver, é o meu dinheiro mesmo" — Nicole (S2, inativa), descrevendo a descoberta</div>
+            <div class="quote-chip" style="margin:4px 0 8px">💬 "Fiquei meio para baixo" — Davi (S1, ativo), ao descobrir que não era limite concedido</div>
+            <span>Status:</span> <strong style="color:var(--teal)">Confirmada</strong> — convergência quali + quanti direta com Hipótese 3 do Research Plan.
+          </div>
+        </div>
+        <div class="neg-hyp neg-hyp--confirmed">
+          <div class="neg-hyp-icon">✅</div>
+          <div class="hyp-badge hyp-badge--confirmed">✅ Hipótese 4 — Confirmada</div>
+          <div class="neg-hyp-title">Depósito manual como passo extra gera friction — Pix e débito são preferidos</div>
+          <div class="neg-hyp-body">A necessidade de mover dinheiro para a Caixinha antes de cada compra representa um custo de atenção e esforço que o U18 prefere evitar. Pix e débito não exigem nenhuma ação prévia — o cartão de crédito, sim. Para inativos, esse atrito é o principal diferencial em relação a quem segue usando o produto. Não há vantagem clara no uso. Já para os ativos, o produto resolve uma necessidade real, compensando esse passo extra.</div>
+          <div class="neg-hyp-evidence">
+            <span>Evidência quanti:</span> 52% dos inativos e 39% dos ativos preferem Pix ou débito para evitar o passo extra. Apenas 13% dos inativos e 20% dos ativos consideram o depósito parte natural da rotina.<br><br>
+            <span>Evidência quali:</span>
+            <div class="quote-chip" style="margin:6px 0 8px">💬 "Prefiro usar o Pix mesmo, mais fácil" — Nicole (S2, inativa)</div>
+            <span>Status:</span> <strong style="color:var(--teal)">Confirmada</strong> — convergência direta entre dado quanti (friction como principal barreira dos inativos) e relato qualitativo.
+          </div>
+        </div>
+
+        <div class="neg-hyp neg-hyp--confirmed">
+          <div class="neg-hyp-icon">✅</div>
+          <div class="hyp-badge hyp-badge--confirmed">✅ Hipótese 5 — Confirmada</div>
+          <div class="neg-hyp-title">O U18 não entende que o limite é estritamente o valor depositado</div>
+          <div class="neg-hyp-body">Parte relevante dos usuários — especialmente os que ainda não ativaram a função crédito do cartão — não compreende que o limite disponível depende exclusivamente do que está na Caixinha. Esse gap de entendimento prediz diretamente o volume de compras negadas.</div>
+          <div class="neg-hyp-evidence">
+            <span>Evidência quanti:</span> 93% dos não-convertidos erram ou não sabem como o limite funciona. Entre inativos, 27% — e entre ativos, 24%. O entendimento errado do limite prediz o volume de negadas: quem acha que tem limite pré-aprovado acumula média de 35,2 negadas, contra 17,3 de quem entende corretamente.<br><br>
+            <span>Evidência quali:</span> A hipótese não encontrou confirmação verbal direta nas sessões — nenhum participante verbalizou explicitamente a confusão entre saldo e limite. A confusão aparece de forma implícita no padrão de uso, mas não foi articulada pelos participantes.<br><br>
+            <span>Status:</span> <strong style="color:var(--teal)">Confirmada quantitativamente</strong> — evidência quanti robusta; sem confirmação verbal direta nas sessões qualitativas.
+          </div>
+        </div>
+
+        <div class="neg-hyp" style="background:var(--amber-bg);border:1px solid var(--amber-border);border-left:3px solid var(--amber)">
+          <div class="neg-hyp-icon">⚠️</div>
+          <div class="hyp-badge" style="background:var(--amber-bg);color:var(--amber);border:1px solid var(--amber-border)">⚠️ Hipótese 6 — Parcialmente confirmada</div>
+          <div class="neg-hyp-title">Famílias de baixa renda percebem o produto como "luxo de liquidez"</div>
+          <div class="neg-hyp-body">A ideia de deixar dinheiro "travado" como garantia pode ser percebida como risco à liquidez da família — especialmente em contextos de renda mais apertada, onde o dinheiro precisa estar disponível a qualquer momento via Pix.</div>
+          <div class="neg-hyp-evidence">
+            <span>Evidência quanti:</span> "Não tenho dinheiro sobrando para deixar guardado" aparece em 11,6% dos não-convertidos com barreiras respondidas — 5ª barreira mais citada. <em style="color:var(--faint);font-size:10.5px">(base pequena: n=43 não-convertidos com barreiras respondidas)</em><br><br>
+            <span>Evidência quali:</span> A hipótese não encontrou relatos diretos nas sessões qualitativas disponíveis.<br><br>
+            <span>Status:</span> <strong style="color:var(--amber)">Parcialmente confirmada</strong> — presente nos dados como barreira, mas com base reduzida e sem confirmação qualitativa. Requer investigação adicional.
+          </div>
+        </div>
+
+
+
+</div>
+
+        <div class="hyp-group-label hyp-group-label--new" style="margin-top:8px">🔍 Hipóteses emergentes — levantadas a partir desta pesquisa</div>
+
+        <div class="neg-hyp neg-hyp--new" style="grid-column:1/-1">
+          <div class="neg-hyp-icon">🧩</div>
+          <div class="hyp-badge">🔍 Hipótese central — Nova</div>
+          <div class="neg-hyp-title">O usuário tem um entendimento equivocado sobre o que acontece com o dinheiro depositado na Caixinha</div>
+          <div class="neg-hyp-body">A hipótese central é que parte relevante das compras negadas ocorre porque o usuário não compreende a mecânica dos valores na Caixinha. Esse entendimento equivocado leva o usuário a tentar compras acima do limite efetivo — sem perceber que está fazendo isso. Não saber quanto tem de limite é uma consequência direta desse gap, não a causa.</div>
+          <div class="neg-hyp-evidence"><span>Status:</span> Hipótese central — não testada diretamente. Os desdobramentos abaixo apontam caminhos de validação específicos.</div>
+        </div>
+
+        <div class="neg-hyp neg-hyp--new" style="grid-column:1/-1;background:#F9F5FF">
+          <div class="neg-hyp-icon">📋</div>
+          <div class="hyp-badge" style="margin-bottom:10px">📋 Conceitos mal compreendidos sobre a Caixinha do Cartão</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:4px">
+            <div style="background:#fff;border:1px solid var(--purple-border);border-radius:6px;padding:10px 12px">
+              <div style="font-size:10px;font-weight:700;color:var(--purple-mid);margin-bottom:4px">① Dinheiro comprometido como garantia</div>
+              <div style="font-size:11px;line-height:1.55;color:var(--text)">Parte dos clientes não entende que o valor depositado usado em compras fica bloqueado na Caixinha como colateral — e não pode ser sacado nem reutilizado como limite até o pagamento da fatura.</div>
+              <div style="font-size:10.5px;color:var(--faint);margin-top:6px">Dados de survey: 19,9% dos ativos e 22,1% dos inativos acreditam que podem sacar o dinheiro da Caixinha via Pix a qualquer momento.</div>
+            </div>
+            <div style="background:#fff;border:1px solid var(--purple-border);border-radius:6px;padding:10px 12px">
+              <div style="font-size:10px;font-weight:700;color:var(--purple-mid);margin-bottom:4px">④ Valor exibido ≠ limite disponível</div>
+              <div style="font-size:11px;line-height:1.55;color:var(--text)">A tela da Caixinha exibe o total depositado, não o limite real disponível (total − comprometido). Quem depositou R$200 e usou R$120 vê R$200 — e tenta compras além do limite real sem perceber.</div>
+              <div style="font-size:10.5px;color:var(--faint);margin-top:6px">Hipótese de interface — sem dado survey direto. Validação requer análise contextual ou screen flow analytics (ver Hipótese 3).</div>
+            </div>
+          <div style="background:#fff;border:1px solid var(--purple-border);border-radius:6px;padding:10px 12px">
+              <div style="font-size:10px;font-weight:700;color:var(--purple-mid);margin-bottom:4px">③ Cobranças automáticas reduzem o limite</div>
+              <div style="font-size:11px;line-height:1.55;color:var(--text)">Assinaturas recorrentes (Google One, Spotify) tentam debitar do limite no mesmo dia do mês do pagamento inicial, independente do saldo disponível na Caixinha. O usuário não percebe porque não iniciou a transação.</div>
+              <div style="font-size:10.5px;color:var(--faint);margin-top:6px">Evidência quali: Davi/S1 e S5 acumularam dezenas de negadas automáticas sem perceber. Sem dado direto na survey.</div><div class="quote-chip" style="margin-top:6px;font-size:10.5px">💬 "Sempre checa" o saldo — Davi (S5, ativo), descrito como o participante com maior maturidade financeira do campo, acostumado a acompanhar o uso do cartão. Ainda assim, acumulou 13 negadas automáticas do Google One sem perceber, pois não as associava a compras iniciadas por ele.</div>
+            </div>
+            <div style="background:#fff;border:1px solid var(--purple-border);border-radius:6px;padding:10px 12px">
+              <div style="font-size:10px;font-weight:700;color:var(--purple-mid);margin-bottom:4px">② Depósito é garantia, não débito</div>
+              <div style="font-size:11px;line-height:1.55;color:var(--text)">O dinheiro depositado não é "gasto" na compra — fica travado como colateral e só é consumido se a fatura não for paga com outro saldo. Isso é o que protege contra endividamento. Quem não entende isso pode rejeitar o produto como um risco para a saúde financeira.</div>
+              <div style="font-size:10.5px;color:var(--faint);margin-top:6px">Evidência quali: João Victor (S6) temia pagar "duas vezes" — a compra e a fatura — não compreendendo que o valor na Caixinha é o próprio colateral, não uma dívida separada.</div><div class="quote-chip" style="margin-top:6px;font-size:10.5px">💬 "Seriam duas dívidas" — João Victor (S6), descrevendo o medo de pagar a compra e depois a fatura</div>
+            </div>
+            </div>
+        </div>
+
+        <div style="grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px">
+        <div class="neg-hyp neg-hyp--new">
+          <div class="neg-hyp-icon">📱</div>
+          <div class="hyp-badge">🔍 Hipótese 1 — Desdobramento</div>
+          <div class="neg-hyp-title">Tela da Caixinha não mostra limite disponível</div>
+          <div class="neg-hyp-body">A tela exibe o total depositado como valor principal. Usuários que depositaram R$200 e usaram R$120 ainda veem R$200 — e tentam compras além do limite real sem perceber.</div>
+          <div class="neg-hyp-evidence"><span>Evidência quali:</span> Davi/S1 acumulou 13 negadas automáticas sem perceber. <span>Status:</span> Hipótese — requer cruzamento transacional para confirmar.</div><div class="ba-suggest ba-suggest--compact"><span class="ba-icon">📊</span><strong>BA:</strong> Cruzar negadas com tipo de transação (recorrente vs. pontual)</div>
+          <div class="research-suggest" style="margin-top:8px;font-size:11px"><span class="rs-label">💡 Follow-up de pesquisa com usuários</span><br><strong>O que os clientes entendem sobre o limite após fazer um depósito na Caixinha?</strong> Um teste de usabilidade não-moderado (Maze) ou uma análise contextual pode revelar se o usuário sabe que o limite é exatamente o valor depositado — e se percebe que ele diminui após uma compra ou cobrança automática.</div>
+        </div>
+
+        <div class="neg-hyp neg-hyp--new">
+          <div class="neg-hyp-icon">🔄</div>
+          <div class="hyp-badge">🔍 Hipótese 2 — Desdobramento</div>
+          <div class="neg-hyp-title">Assinaturas recorrentes consomem limite sem que o usuário perceba</div>
+          <div class="neg-hyp-body">Cobranças automáticas (Google One, Spotify) debitam do limite no dia de vencimento, independente do saldo na Caixinha naquele momento. O usuário não associa essas negadas ao produto — para ele, não iniciou nenhuma compra.</div>
+          <div class="neg-hyp-evidence"><span>Evidência quali:</span> Davi/S5 — 13 tentativas do Google One, não reportadas como negadas pois ele não as iniciou. <span>Status:</span> Hipótese — análise de correlação solicitada.</div><div class="ba-suggest ba-suggest--compact"><span class="ba-icon">📊</span><strong>BA:</strong> Correlação assinaturas recorrentes × negadas por usuário</div>
+        </div>
+
+        <div class="neg-hyp neg-hyp--new">
+          <div class="neg-hyp-icon">🔍</div>
+          <div class="hyp-badge">🔍 Hipótese 3 — Desdobramento</div>
+          <div class="neg-hyp-title">Usuário consulta a Caixinha — não a Fatura — para ver o limite</div>
+          <div class="neg-hyp-body">A tela da Caixinha exibe o total depositado sem descontar o que já está comprometido como garantia. Um usuário que depositou R$100 e gastou R$60 ainda vê R$100 — e tenta uma nova compra além do limite real sem perceber. O resultado é uma negada que ele não consegue explicar e que o produto não sinaliza de forma clara.</div>
+          <div class="neg-hyp-evidence"><span>Origem:</span> Análise de interface — nenhum participante relatou consultar a tela de fatura antes de comprar; não ficou claro como a verificação sobre saldo disponível na Caixinha era feita, mas a menção a essa checagem ocorreu repetidamente ao longo das sessões. <span>Status:</span> Hipótese — requer análise contextual, ou screen flow analytics para confirmar.</div>
+          <div class="research-suggest" style="margin-top:8px;font-size:11px"><span class="rs-label">💡 Follow-up de pesquisa com usuários</span><br><strong>Qual tela os U18 acessam para consultar seu limite no cartão — Caixinha ou Fatura?</strong> Se a maioria consulta a Caixinha, a exibição do total depositado sem descontar o comprometido é um possível fator influenciando as compras negadas evitáveis. Esse comportamento é mais bem investigado via análise contextual de telas, teste de usabilidade não-moderado (Maze), screen flow analytics ou sondado via survey.</div>
+        </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
 </div>
 </div><!-- end pane-quanti -->
 
@@ -1224,7 +1403,7 @@ body.has-sidenav .dash{margin-left:200px}
 </div></div><!-- end pane-overview -->
 
   <!-- COMPARISON TABLE -->
-<div class="pane" id="pane-table">id="pane-table"><div class="dash">
+<div class="pane" id="pane-table"><div class="dash">
   <div class="section" id="st-tabela">Jornada</div>
 
     <div class="tbl-filters">
@@ -2288,6 +2467,8 @@ const PANE_NAVS = {
     {id:'sq-barreiras',     label:'Barreiras de adoção'},
     {id:'sq-pgto',          label:'Pagamento e negadas'},
     {id:'sq-canal-lg',      label:'Canal LG'},
+    {id:'sq-motivos',       label:'Motivos percebidos'},
+    {id:'sq-hipoteses',     label:'Hipóteses'},
   ],
   'negadas': [
     {id:'sn-visao',         label:'Visão geral'},

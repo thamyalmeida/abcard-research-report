@@ -517,7 +517,7 @@ body.has-sidenav .dash{margin-left:200px}
     <div class="header-logo-mark">N</div>
     <div class="header-title-block">
       <h1>ABCard Deep Dive</h1>
-      <div class="meta">nubank-0326-credbu-abcard · U18 n=722 · LG n=469 · 6 sessões qualitativas</div>
+      <div class="meta">nubank-0326-credbu-abcard</div>
     </div>
   </div>
   <div class="header-badge">Research · Mar 2026</div>
@@ -526,7 +526,7 @@ body.has-sidenav .dash{margin-left:200px}
 <!-- TOP-LEVEL TABS -->
 <div class="top-tabs">
   <button class="top-tab active" onclick="showPane('resumo',this)">Resumo executivo</button>
-  <button class="top-tab" onclick="showPane('quanti',this)">Dados transacionais &amp; atitudinais</button>
+  <button class="top-tab" onclick="showPane('quanti',this)">Relatório</button>
   <button class="top-tab" onclick="showPane('overview',this)">Entrevistados</button>
   <button class="top-tab" onclick="showPane('table',this)">Jornada</button>
   <button class="top-tab" onclick="showPane('interface',this)">Interface</button>
@@ -559,7 +559,7 @@ body.has-sidenav .dash{margin-left:200px}
     </div>
     <div class="metric" style="background:var(--amber-bg);border:1px solid var(--amber-border)">
       <div class="metric-val" style="color:var(--amber)">26%</div>
-      <div class="metric-label"><span style="font-size:11px;font-weight:500;color:var(--amber)">Só</span> das negadas são percebidas</div>
+      <div class="metric-label">das negadas são percebidas</div>
       <div class="metric-sub">a maioria acumula em silêncio</div>
     </div>
     <div class="metric" style="background:var(--amber-bg);border:1px solid var(--amber-border)">
@@ -718,6 +718,12 @@ body.has-sidenav .dash{margin-left:200px}
 <!-- ═══════════════════════════════════════════════════ QUANTI ═══ -->
 <div class="pane" id="pane-quanti">
 <div class="dash">
+
+  <div style="margin-bottom:2rem">
+    <h2 style="font-size:22px;font-weight:700;color:var(--text);letter-spacing:-.03em;line-height:1.2;margin-bottom:.5rem">Relatório de dados</h2>
+    <p style="font-size:13px;color:var(--muted);line-height:1.7;max-width:760px">Esta seção reúne os dados quantitativos coletados via survey com 722 U18 e 469 Legal Guardians, complementados pelos dados transacionais dos respondentes. Os gráficos estão organizados por tema — comportamento transacional, compreensão do produto, autoseize e friction, barreiras de adoção, pagamento da fatura, canal LG e motivos percebidos das negadas. Use os filtros para alternar entre respondentes U18 e LG e refinar por status do cliente.</p>
+  </div>
+
   <div class="filters">
     <div class="filter-group">
       <div class="filter-label">Tipo de respondente</div>
@@ -843,7 +849,7 @@ body.has-sidenav .dash{margin-left:200px}
           <div class="neg-hyp-body">A alta taxa de compras negadas tem vários motivos, entre eles, a confusão entre o saldo total na conta Nubank e o limite disponível no cartão — que depende exclusivamente do valor depositado na Caixinha. O usuário assume que, se há dinheiro no Nubank, o cartão deveria passar.</div>
           <div class="neg-hyp-evidence">
             <span>Evidência quanti:</span> Entre ativos com entendimento errado do limite: quem acha que "o limite é o saldo da conta" acumula média de 28,9 negadas vs 17,3 de quem entende corretamente — 67% a mais. Adicionalmente, 20,4% dos ativos com negada percebida reportam "tinha dinheiro na conta, mas não estava na Caixinha" como motivo direto.<br><br>
-            <span>Status:</span> <strong style="color:var(--teal)">Confirmada quantitativamente</strong> — o dado transacional mostra que o entendimento errado do limite prediz diretamente o volume de negadas, e 20,4% dos ativos identificam explicitamente o gap de localização como motivo. A hipótese não encontrou confirmação direta nas sessões qualitativas — nenhum participante relatou explicitamente ter tentado uma compra acreditando que o saldo da conta cobriria o limite do cartão.
+            <span>Status:</span> <strong style="color:var(--teal)">Confirmada quantitativamente</strong> — o dado transacional mostra que o entendimento errado do limite prediz diretamente o volume de negadas, e 20,4% dos ativos identificam explicitamente o gap de entendimento sobre limite e saldo como motivo. A hipótese não encontrou confirmação direta nas sessões qualitativas — nenhum participante relatou explicitamente ter tentado uma compra acreditando que o saldo da conta cobriria o limite do cartão.
           </div>
         </div>
 
@@ -1137,7 +1143,7 @@ body.has-sidenav .dash{margin-left:200px}
           <div class="neg-hyp-body">A alta taxa de compras negadas tem vários motivos, entre eles, a confusão entre o saldo total na conta Nubank e o limite disponível no cartão — que depende exclusivamente do valor depositado na Caixinha. O usuário assume que, se há dinheiro no Nubank, o cartão deveria passar.</div>
           <div class="neg-hyp-evidence">
             <span>Evidência quanti:</span> Entre ativos com entendimento errado do limite: quem acha que "o limite é o saldo da conta" acumula média de 28,9 negadas vs 17,3 de quem entende corretamente — 67% a mais. Adicionalmente, 20,4% dos ativos com negada percebida reportam "tinha dinheiro na conta, mas não estava na Caixinha" como motivo direto.<br><br>
-            <span>Status:</span> <strong style="color:var(--teal)">Confirmada quantitativamente</strong> — o dado transacional mostra que o entendimento errado do limite prediz diretamente o volume de negadas, e 20,4% dos ativos identificam explicitamente o gap de localização como motivo. A hipótese não encontrou confirmação direta nas sessões qualitativas — nenhum participante relatou explicitamente ter tentado uma compra acreditando que o saldo da conta cobriria o limite do cartão.
+            <span>Status:</span> <strong style="color:var(--teal)">Confirmada quantitativamente</strong> — o dado transacional mostra que o entendimento errado do limite prediz diretamente o volume de negadas, e 20,4% dos ativos identificam explicitamente o gap de entendimento sobre limite e saldo como motivo. A hipótese não encontrou confirmação direta nas sessões qualitativas — nenhum participante relatou explicitamente ter tentado uma compra acreditando que o saldo da conta cobriria o limite do cartão.
           </div>
         </div>
 
@@ -2204,7 +2210,7 @@ const D={
 };
 
 const INTERP={
-  'i-done-denied':'Para o ativo típico, a experiência com o cartão é de ter mais negadas do que compras realizadas — mediana de 9 negadas contra 5 realizadas. O inativo chega ao produto, tenta usar, e é barrado: mediana de 4 negadas com apenas 1 compra aprovada. O motivo para esse comportamento se baseia em pelo menos 1 de 4 motivos mapeados: <a href=\"#\" onclick=\"showPane(\'negadas\',document.querySelector(\'.top-tab:nth-child(2)\'));setTimeout(()=>scrollToId(\'sn-hipoteses\'),300);return false;\" style=\"color:var(--purple);text-decoration:underline;text-decoration-style:dotted\">ver hipóteses na aba Compras Negadas →</a><div class=\"ba-suggest\"><span class=\"ba-icon\">📊</span><strong>Análise sugerida para BAs</strong><br><ul style=\"margin:6px 0 0 14px;display:flex;flex-direction:column;gap:5px\"><li><strong>Qual % das compras negadas ocorre com saldo disponível na conta corrente mas não na Caixinha?</strong> Ponto de partida: na survey, 20,4% dos ativos com negadas apontam \"dinheiro na conta, mas não na Caixinha\" como motivo — isso ancora a magnitude do gap de localização de saldo que a análise transacional pode quantificar com precisão.</li><li><strong>As compras negadas são do tipo recorrente ou pontual? Variam entre clientes ativos e inativos?</strong> Se as compras negadas se concentram em cobranças automáticas, o problema é de comunicação de assinaturas. Se feitas pelo usuário, é o gap de limite.</li></ul></div>',
+  'i-done-denied':'Para o ativo típico, a experiência com o cartão é de ter mais negadas do que compras realizadas — mediana de 9 negadas contra 5 realizadas. O inativo chega ao produto, tenta usar, e é barrado: mediana de 4 negadas com apenas 1 compra aprovada. Esse comportamento se baseia em pelo menos 1 de 2 grandes motivos mapeados: 1) o cliente espera por crédito convencional — 37% dos ativos e 43% dos inativos com negada percebida apontaram "achei que o Nubank me daria um limite sem precisar depositar" como motivo, hipótese confirmada por essa pesquisa e 2) o entendimento sobre o que acontece com o dinheiro depositado na Caixinha é bastante comprometido, hipótese nova, mapeada após esse estudo. Veja a <a href=\"#\" onclick=\"showPane(\'negadas\',document.querySelector(\'.top-tab:nth-child(2)\'));setTimeout(()=>scrollToId(\'sn-hipoteses\'),300);return false;\" style=\"color:var(--purple);text-decoration:underline;text-decoration-style:dotted\">seção hipóteses →</a><div class=\"ba-suggest\"><span class=\"ba-icon\">📊</span><strong>Análise sugerida para BAs</strong><br><ul style=\"margin:6px 0 0 14px;display:flex;flex-direction:column;gap:5px\"><li><strong>Qual % das compras negadas ocorre com saldo disponível na conta corrente mas não na Caixinha?</strong> Ponto de partida: na survey, 20,4% dos ativos com negadas apontam \"dinheiro na conta, mas não na Caixinha\" como motivo — isso ancora a magnitude do gap de entendimento sobre limite e saldo que a análise transacional pode quantificar com precisão.</li><li><strong>As compras negadas são do tipo recorrente ou pontual? Variam entre clientes ativos e inativos?</strong> Se as compras negadas se concentram em cobranças automáticas, o problema é de comunicação de assinaturas. Se feitas pelo usuário, é o gap de limite.</li></ul></div>',
   'i-denied-rate':'A taxa de negadas dos inativos (96,2%) revela que o abandono do produto é o resultado de tentativas repetidamente frustradas sem explicação clara. Os inativos tentaram usar o cartão — e ele não passou. Isso acontece por dois caminhos distintos: (1) depositaram pouco ou nada na Caixinha e tentaram compras sem limite disponível; ou (2) esperavam que o Nubank concedesse crédito, tentaram usar sem depositar e foram barrados. Os dados quanti confirmam: 42,9% dos inativos com negadas apontam "esperava que o Nubank me daria um limite sem precisar depositar" como motivo — e 19% relatam "dinheiro na conta, mas não na Caixinha". Nycole (S2, inativa) resume o segundo perfil com clareza: esperava "crédito de verdade", entendeu que não era isso, e abandonou. Para ambos os perfis, comunicar melhor a mecânica do produto — como funcionam os valores uma vez depositados na Caixinha — e uma régua de comunicação proativa ao ter compras negadas são elementos-chave para corrigir a rota da experiência desses clientes e a performance do produto.<div class=\"ba-suggest\"><span class=\"ba-icon\">📊</span><strong>Análise sugerida para BAs</strong><br><ul style=\"margin:6px 0 0 14px;display:flex;flex-direction:column;gap:5px\"><li><strong>As negadas dos inativos são em assinaturas recorrentes (cobranças automáticas) ou em compras iniciadas manualmente pelo usuário?</strong> Se recorrentes, o problema é de visibilidade de cobranças automáticas. Se feitas pelo usuário, é o gap de limite — seja por confusão sobre o que ocorre com o valor na Caixinha, seja por expectativa frustrada de que o Nubank fosse dar limite regular.</li></ul></div>',
   'i-posse-grp':'Entre os que conhecem o produto, a posse declarada cai conforme o engajamento: 86,9% dos ativos diz ter o cartão, contra 59,9% dos inativos. O dado mais relevante está nos inativos: 40,1% dizem não ter o cartão — mesmo sendo, por definição, usuários que depositaram na Caixinha. Entre não-convertidos que conhecem o produto, 71,4% dizem não ter.<br><br>Três hipóteses complementares explicam o gap entre inativos:<div class=\"hyp-box\"><span class=\"hyp-box-label\">Hipótese 1</span><br><strong>Ativação mecânica</strong> — o usuário completou o fluxo sem associar o gesto ao produto. O cartão existe, mas nunca entrou na rotina.</div><div class=\"hyp-box\"><span class=\"hyp-box-label\">Hipótese 2</span><br><strong>Função crédito percebida como inativa</strong> — sabe da existência do cartão, mas acha que o crédito não está habilitado. João Victor (S6) ativou o cartão e não reconhecia ter feito isso.</div><div class=\"hyp-box\"><span class=\"hyp-box-label\">Hipótese 3</span><br><strong>Expectativa de cartão físico</strong> — ao ativar a função crédito, esperavam receber um novo cartão separado. Sem ele, não reconhecem o produto como ativo.</div>Como quer que seja, o produto precisa ativamente engajar esses clientes.',
   'i-awareness-grp':'54,3% dos não-convertidos e 32,2% dos inativos dizem não conhecer o produto — contra 14,6% entre ativos. Para os não-convertidos, isso é consistente com dois caminhos: a oferta não explicou bem o valor do produto, ou sequer foi vista por esses clientes. Para os inativos, o gráfico ao lado explora algumas possibilidades.',
@@ -2223,7 +2229,7 @@ const INTERP={
   'i-negada-sim-nao':'29,6% dos ativos e 25,8% dos inativos reportam ter tido pelo menos uma compra negada consciente. Cruzando com a <strong>mediana de 9 negadas por ativo</strong> (média: 21,6 — inflada por outliers com até 341 negadas), o dado revela que a <strong>grande maioria das negadas não é percebida pelo usuário</strong> — especialmente se forem cobranças recorrentes automáticas (Google One, Spotify), que falham em segundo plano sem que o usuário tome uma ação ativa. O percentual de negadas conscientes entre inativos (25,8%) sendo inferior ao de ativos (29,6%) reforça que os inativos acumulam negadas sem associá-las ao produto.',
   'i-incent-gap':'A maioria dos LGs se diz incentivadora e quer que o filho \\"aprenda a usar crédito\\" — mas 64% erra ou não sabe como o limite funciona, e 59% erra ou não sabe como a Caixinha funciona. Isso gera o conflito: o pai incentiva o uso, o filho deposita pouco para testar, e ambos se frustram quando a compra é negada ou o dinheiro \\"some\\" do saldo livre. O LG incentiva o uso do cartão, mas não sabe ajudar o filho quando a transação é negada — ele não atua como o suporte técnico que o menor precisa no início da jornada.',
   'i-argumento':'O LG usa \"aprender crédito sem dívidas\" em 61% dos casos — exatamente o que o produto entrega e o que o app menos comunica. O argumento mais usado pelo LG está ausente do onboarding. O onboarding, por sua vez, descreve incorretamente o ciclo do dinheiro nas telas de sucesso — contradizendo o próprio argumento que o LG usa para incentivar o filho.<div class=\"quote-chip\">💬 \"Era uma dica financeira sobre como utilizar o crédito pré-pago... como já t\u00e1 pré-pago, n\u00e3o tem risco de sujar o seu nome\" — Davi (S5, ativo), descrevendo o que aprendeu no TikTok, alinhado com o argumento mais usado pelos LGs</div>',
-  'i-motivo-negada':'"Esperava limite sem depositar" lidera em ambos os grupos — 37% entre ativos e 42,9% entre inativos. É a confirmação quantitativa direta da Hipótese 3 do plano de pesquisa. O segundo motivo entre ativos é "sem saldo suficiente" (31,5%), que diferente do primeiro, não é um gap de entendimento — é um gap de gestão de saldo. "Dinheiro na conta, não na Caixinha" em 20,4% dos ativos confirma o gap de localização: o usuário sabe que precisa de saldo na Caixinha, mas erra o lugar.<div class=\"quote-chip\">💬 \"Tentei comprar uma bola de altinha de R$60, mas tinha só R$40 na caixinha\" — Davi (S1, ativo)</div>'
+  'i-motivo-negada':'"Esperava limite sem depositar" lidera em ambos os grupos — 37% entre ativos e 42,9% entre inativos. É a confirmação quantitativa direta da Hipótese 3 do plano de pesquisa. O segundo motivo entre ativos é "sem saldo suficiente" (31,5%), que diferente do primeiro, não é um gap de entendimento — é um gap de gestão de saldo. "Dinheiro na conta, não na Caixinha" em 20,4% dos ativos confirma o gap de entendimento sobre limite e saldo: o usuário sabe que precisa de saldo na Caixinha, mas erra o lugar.<div class=\"quote-chip\">💬 \"Tentei comprar uma bola de altinha de R$60, mas tinha só R$40 na caixinha\" — Davi (S1, ativo)</div>'
 };
 
 function bar(id,labels,datasets,horizontal,legend,maxX,nBases){
@@ -2465,7 +2471,7 @@ const PANE_NAVS = {
     {id:'sq-comp-negadas',  label:'Compreensão × negadas'},
     {id:'sq-autoseize',     label:'Autoseize e friction'},
     {id:'sq-barreiras',     label:'Barreiras de adoção'},
-    {id:'sq-pgto',          label:'Pagamento e negadas'},
+    {id:'sq-pgto',          label:'Pagamento'},
     {id:'sq-canal-lg',      label:'Canal LG'},
     {id:'sq-motivos',       label:'Motivos percebidos'},
     {id:'sq-hipoteses',     label:'Hipóteses'},

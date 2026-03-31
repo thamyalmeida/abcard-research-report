@@ -525,17 +525,197 @@ body.has-sidenav .dash{margin-left:200px}
 
 <!-- TOP-LEVEL TABS -->
 <div class="top-tabs">
-  <button class="top-tab active" onclick="showPane('quanti',this)">Dados transacionais &amp; atitudinais</button>
+  <button class="top-tab active" onclick="showPane('resumo',this)">Resumo executivo</button>
+  <button class="top-tab" onclick="showPane('quanti',this)">Dados transacionais &amp; atitudinais</button>
   <button class="top-tab" onclick="showPane('negadas',this)">Compras negadas</button>
   <button class="top-tab" onclick="showPane('overview',this)">Entrevistados</button>
-  <button class="top-tab" onclick="showPane('table',this)">Comparativo de jornadas</button>
+  <button class="top-tab" onclick="showPane('table',this)">Jornada</button>
   <button class="top-tab" onclick="showPane('interface',this)">Interface</button>
   <button class="top-tab" onclick="showPane('recs',this)">Recomendações</button>
   <button class="top-tab" onclick="showPane('metodo',this)">Método</button>
 </div>
 
+
+<!-- ═══════════════════════════════════════════════════ RESUMO ═══ -->
+<div class="pane active" id="pane-resumo"><div class="dash">
+
+  <div style="margin-bottom:2rem">
+    <h2 style="font-size:22px;font-weight:700;color:var(--text);letter-spacing:-.03em;line-height:1.2;margin-bottom:.5rem">ABCard — Resumo executivo</h2>
+    <p style="font-size:13px;color:var(--muted);line-height:1.6;max-width:760px">Pesquisa qualitativa e quantitativa sobre o produto ABCard (Caixinha do Cartão para menores de 18 anos). Survey com 722 U18 + 469 Legal Guardians · 6 entrevistas em profundidade · Campo: março de 2026. <strong style="color:var(--text)">Tempo estimado de leitura: 20 min.</strong></p>
+  </div>
+
+  <div style="font-size:11px;font-weight:700;color:var(--purple);letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px">O problema em números</div>
+
+  <div class="metric-row" style="grid-template-columns:repeat(5,1fr);margin-bottom:2rem">
+    <div class="metric" style="background:var(--coral-bg);border:1px solid var(--coral-border)">
+      <div class="metric-val" style="color:var(--coral)">96,2%</div>
+      <div class="metric-label">das tentativas dos inativos falham</div>
+      <div class="metric-sub">taxa de negadas — U18 inativos</div>
+    </div>
+    <div class="metric" style="background:var(--coral-bg);border:1px solid var(--coral-border)">
+      <div class="metric-val" style="color:var(--coral)">5/6</div>
+      <div class="metric-label">sessões com gap de expectativa</div>
+      <div class="metric-sub">usuário esperava crédito convencional</div>
+    </div>
+    <div class="metric" style="background:var(--amber-bg);border:1px solid var(--amber-border)">
+      <div class="metric-val" style="color:var(--amber)">26%</div>
+      <div class="metric-label">das negadas são percebidas</div>
+      <div class="metric-sub">a maioria acumula em silêncio</div>
+    </div>
+    <div class="metric" style="background:var(--amber-bg);border:1px solid var(--amber-border)">
+      <div class="metric-val" style="color:var(--amber)">59%</div>
+      <div class="metric-label">dos LGs erra a mecânica da Caixinha</div>
+      <div class="metric-sub">mesmo entre os incentivadores</div>
+    </div>
+    <div class="metric" style="background:var(--teal-bg);border:1px solid var(--teal-border)">
+      <div class="metric-val" style="color:var(--teal)">2×</div>
+      <div class="metric-label">mais negadas com entendimento errado</div>
+      <div class="metric-sub">do limite vs. quem entende corretamente</div>
+    </div>
+  </div>
+
+  <div style="background:var(--purple-bg2);border-left:3px solid var(--purple);border-radius:0 8px 8px 0;padding:14px 18px;margin-bottom:2rem;max-width:860px">
+    <p style="font-size:14px;font-weight:600;color:var(--text);line-height:1.6;margin:0">O ABCard não tem defeito de produto — tem um problema de comunicação. O mecanismo central (guardar dinheiro = ter limite) não é compreendido antes do primeiro uso, e o produto não intervém quando o usuário falha.</p>
+  </div>
+
+  <div style="font-size:11px;font-weight:700;color:var(--purple);letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px">Por que isso acontece — três vetores de distorção</div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:2rem">
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px">
+      <div style="font-size:11px;font-weight:700;color:var(--coral);letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px">① Produto</div>
+      <div style="font-size:13.5px;font-weight:600;color:var(--text);margin-bottom:8px;line-height:1.3">A tela de sucesso descreve o ciclo do dinheiro de forma incompleta</div>
+      <p style="font-size:12.5px;color:var(--muted);line-height:1.6;margin:0">"Seu limite será liberado em até 30 minutos" — frase verdadeira apenas quando o pagamento é feito com saldo externo. Para os 47% que pagam com a própria Caixinha, o dinheiro não volta. O texto não distingue os dois cenários.</p>
+      <div style="margin-top:10px;padding:8px 10px;background:var(--coral-bg);border-radius:6px;font-size:11.5px;color:var(--coral);font-weight:600">47% dos ativos pagam a fatura com a Caixinha</div>
+    </div>
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px">
+      <div style="font-size:11px;font-weight:700;color:var(--amber);letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px">② Canal LG</div>
+      <div style="font-size:13.5px;font-weight:600;color:var(--text);margin-bottom:8px;line-height:1.3">O LG que incentiva não sabe orientar — e isso tem consequência direta</div>
+      <p style="font-size:12.5px;color:var(--muted);line-height:1.6;margin:0">64% dos LGs incentivadores erra o funcionamento do limite e 59% erra a Caixinha. Filhos de LGs com entendimento errado acumulam 58% mais negadas. O LG não é apenas um canal de comunicação — é um vetor de distorção ativo.</p>
+      <div style="margin-top:10px;padding:8px 10px;background:var(--amber-bg);border-radius:6px;font-size:11.5px;color:var(--amber);font-weight:600">LG errado → filho com 18,5 negadas vs. 11,7</div>
+    </div>
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px">
+      <div style="font-size:11px;font-weight:700;color:var(--purple);letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px">③ Onboarding</div>
+      <div style="font-size:13.5px;font-weight:600;color:var(--text);margin-bottom:8px;line-height:1.3">Toda a explicação é entregue de uma vez — antes de qualquer experiência</div>
+      <p style="font-size:12.5px;color:var(--muted);line-height:1.6;margin:0">O entendimento real vem do uso, não da ativação. O onboarding explica o mecanismo no momento de menor relevância e não retorna quando o usuário falha. A frustração acumula sem explicação — 96,2% de negadas entre inativos.</p>
+      <div style="margin-top:10px;padding:8px 10px;background:var(--purple-bg);border-radius:6px;font-size:11.5px;color:var(--purple);font-weight:600">5/6 sessões com gap de expectativa na ativação</div>
+    </div>
+  </div>
+
+  <div style="font-size:11px;font-weight:700;color:var(--purple);letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px">Hipóteses do research plan — resultado</div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:2rem">
+    <div style="display:flex;gap:10px;align-items:flex-start;padding:12px 14px;background:var(--teal-bg);border:1px solid var(--teal-border);border-radius:8px">
+      <span style="font-size:15px;flex-shrink:0">✅</span>
+      <div><div style="font-size:12px;font-weight:700;color:var(--teal);margin-bottom:3px">H1 — Depósito baixo como teste</div><div style="font-size:12px;color:var(--muted);line-height:1.5">55% dos ativos e 57% dos inativos depositaram um valor mínimo só para testar. Não é falta de dinheiro — é ausência de confiança no mecanismo.</div></div>
+    </div>
+    <div style="display:flex;gap:10px;align-items:flex-start;padding:12px 14px;background:var(--teal-bg);border:1px solid var(--teal-border);border-radius:8px">
+      <span style="font-size:15px;flex-shrink:0">✅</span>
+      <div><div style="font-size:12px;font-weight:700;color:var(--teal);margin-bottom:3px">H2 — Confusão saldo/limite</div><div style="font-size:12px;color:var(--muted);line-height:1.5">Quem acha que o limite é o saldo da conta acumula 67% mais negadas. 20% dos ativos com negada cita "dinheiro na conta, não na Caixinha" como motivo.</div></div>
+    </div>
+    <div style="display:flex;gap:10px;align-items:flex-start;padding:12px 14px;background:var(--teal-bg);border:1px solid var(--teal-border);border-radius:8px">
+      <span style="font-size:15px;flex-shrink:0">✅</span>
+      <div><div style="font-size:12px;font-weight:700;color:var(--teal);margin-bottom:3px">H3 — Expectativa de crédito convencional</div><div style="font-size:12px;color:var(--muted);line-height:1.5">37–43% dos usuários com negada esperavam limite sem depositar. Principal motivo de negada em ambos os grupos. Confirmado quali e quanti.</div></div>
+    </div>
+    <div style="display:flex;gap:10px;align-items:flex-start;padding:12px 14px;background:var(--teal-bg);border:1px solid var(--teal-border);border-radius:8px">
+      <span style="font-size:15px;flex-shrink:0">✅</span>
+      <div><div style="font-size:12px;font-weight:700;color:var(--teal);margin-bottom:3px">H4 — Friction do depósito manual</div><div style="font-size:12px;color:var(--muted);line-height:1.5">52% dos inativos prefere Pix para evitar o passo extra. Principal diferencial entre quem permanece ativo e quem abandona.</div></div>
+    </div>
+    <div style="display:flex;gap:10px;align-items:flex-start;padding:12px 14px;background:var(--teal-bg);border:1px solid var(--teal-border);border-radius:8px">
+      <span style="font-size:15px;flex-shrink:0">✅</span>
+      <div><div style="font-size:12px;font-weight:700;color:var(--teal);margin-bottom:3px">H5 — Limite não compreendido</div><div style="font-size:12px;color:var(--muted);line-height:1.5">93% dos não-convertidos erram ou não sabem como o limite funciona. Confirmado quanti — sem confirmação verbal direta nas sessões.</div></div>
+    </div>
+    <div style="display:flex;gap:10px;align-items:flex-start;padding:12px 14px;background:var(--amber-bg);border:1px solid var(--amber-border);border-radius:8px">
+      <span style="font-size:15px;flex-shrink:0">⚠️</span>
+      <div><div style="font-size:12px;font-weight:700;color:var(--amber);margin-bottom:3px">H6 — Liquidez como barreira em baixa renda</div><div style="font-size:12px;color:var(--muted);line-height:1.5">11,6% cita "não tenho dinheiro sobrando para guardar". Base pequena (n=43) — hipótese plausível, evidência insuficiente para afirmar.</div></div>
+    </div>
+  </div>
+
+  <div style="font-size:11px;font-weight:700;color:var(--purple);letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px">Das causas às recomendações</div>
+
+  <div style="border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:2rem">
+    <table style="width:100%;border-collapse:collapse;font-size:12.5px">
+      <thead>
+        <tr style="background:var(--surface-2)">
+          <th style="padding:10px 14px;text-align:left;font-weight:700;color:var(--muted);font-size:11px;letter-spacing:.04em;text-transform:uppercase;border-bottom:1px solid var(--border);width:8%">Rec</th>
+          <th style="padding:10px 14px;text-align:left;font-weight:700;color:var(--muted);font-size:11px;letter-spacing:.04em;text-transform:uppercase;border-bottom:1px solid var(--border);width:48%">Direção</th>
+          <th style="padding:10px 14px;text-align:left;font-weight:700;color:var(--muted);font-size:11px;letter-spacing:.04em;text-transform:uppercase;border-bottom:1px solid var(--border);width:20%">Vetor</th>
+          <th style="padding:10px 14px;text-align:left;font-weight:700;color:var(--muted);font-size:11px;letter-spacing:.04em;text-transform:uppercase;border-bottom:1px solid var(--border);width:24%">Prioridade</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid var(--border)">
+          <td style="padding:10px 14px;font-weight:700;color:var(--text)">2</td>
+          <td style="padding:10px 14px;color:var(--text)">Revisar a frase do retorno do limite nas telas de sucesso</td>
+          <td style="padding:10px 14px"><span style="background:var(--coral-bg);color:var(--coral);border-radius:4px;padding:2px 7px;font-size:11px;font-weight:600">Produto</span></td>
+          <td style="padding:10px 14px"><span style="background:#FFF3CD;color:#856404;border-radius:4px;padding:2px 7px;font-size:11px;font-weight:600">🍎 Low hanging fruit</span></td>
+        </tr>
+        <tr style="border-bottom:1px solid var(--border);background:var(--surface-2)">
+          <td style="padding:10px 14px;font-weight:700;color:var(--text)">1</td>
+          <td style="padding:10px 14px;color:var(--text)">Exibir limite disponível (não apenas saldo depositado) na tela da Caixinha</td>
+          <td style="padding:10px 14px"><span style="background:var(--coral-bg);color:var(--coral);border-radius:4px;padding:2px 7px;font-size:11px;font-weight:600">Produto</span></td>
+          <td style="padding:10px 14px;color:var(--muted);font-size:12px">Requer validação transacional</td>
+        </tr>
+        <tr style="border-bottom:1px solid var(--border)">
+          <td style="padding:10px 14px;font-weight:700;color:var(--text)">3</td>
+          <td style="padding:10px 14px;color:var(--text)">Substituir onboarding estático por régua de comunicação proativa em eventos-chave</td>
+          <td style="padding:10px 14px"><span style="background:var(--purple-bg);color:var(--purple);border-radius:4px;padding:2px 7px;font-size:11px;font-weight:600">Onboarding</span></td>
+          <td style="padding:10px 14px;color:var(--muted);font-size:12px">Alto impacto estrutural</td>
+        </tr>
+        <tr style="border-bottom:1px solid var(--border);background:var(--surface-2)">
+          <td style="padding:10px 14px;font-weight:700;color:var(--text)">6</td>
+          <td style="padding:10px 14px;color:var(--text)">Tratar o LG como canal de risco ativo — materiais sobre autoseize e mecânica da Caixinha</td>
+          <td style="padding:10px 14px"><span style="background:var(--amber-bg);color:var(--amber);border-radius:4px;padding:2px 7px;font-size:11px;font-weight:600">Canal LG</span></td>
+          <td style="padding:10px 14px;color:var(--muted);font-size:12px">Depende de Rec 2 primeiro</td>
+        </tr>
+        <tr style="border-bottom:1px solid var(--border)">
+          <td style="padding:10px 14px;font-weight:700;color:var(--text)">7</td>
+          <td style="padding:10px 14px;color:var(--text)">Hipótese: permitir depósito direto do LG na Caixinha do filho</td>
+          <td style="padding:10px 14px"><span style="background:var(--amber-bg);color:var(--amber);border-radius:4px;padding:2px 7px;font-size:11px;font-weight:600">Canal LG</span></td>
+          <td style="padding:10px 14px;color:var(--muted);font-size:12px">Requer avaliação técnica e regulatória</td>
+        </tr>
+        <tr style="border-bottom:1px solid var(--border);background:var(--surface-2)">
+          <td style="padding:10px 14px;font-weight:700;color:var(--text)">5</td>
+          <td style="padding:10px 14px;color:var(--text)">Diferenciar reoferta: esclarecimento para premissa falsa; argumento de valor para rejeição consciente</td>
+          <td style="padding:10px 14px"><span style="background:var(--teal-bg);color:var(--teal);border-radius:4px;padding:2px 7px;font-size:11px;font-weight:600">Reoferta</span></td>
+          <td style="padding:10px 14px;color:var(--muted);font-size:12px">Alta oportunidade</td>
+        </tr>
+        <tr style="border-bottom:1px solid var(--border)">
+          <td style="padding:10px 14px;font-weight:700;color:var(--text)">4</td>
+          <td style="padding:10px 14px;color:var(--text)">Explorar creators financeiros no TikTok como canal de pré-educação</td>
+          <td style="padding:10px 14px"><span style="background:var(--purple-bg);color:var(--purple);border-radius:4px;padding:2px 7px;font-size:11px;font-weight:600">Onboarding</span></td>
+          <td style="padding:10px 14px;color:var(--muted);font-size:12px">Testável — n=1 como evidência</td>
+        </tr>
+        <tr style="background:var(--surface-2)">
+          <td style="padding:10px 14px;font-weight:700;color:var(--text)">8</td>
+          <td style="padding:10px 14px;color:var(--text)">Rodar análises BA antes de priorizar: negadas pós-autoseize, depósito inicial × negadas, recorrências</td>
+          <td style="padding:10px 14px"><span style="background:var(--surface-3);color:var(--muted);border-radius:4px;padding:2px 7px;font-size:11px;font-weight:600">Pesquisa &amp; BA</span></td>
+          <td style="padding:10px 14px;color:var(--muted);font-size:12px">Pré-requisito para calibrar impacto</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div style="font-size:11px;font-weight:700;color:var(--purple);letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px">Próximos passos sugeridos</div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:2rem">
+    <div style="padding:14px 16px;background:var(--surface);border:1px solid var(--coral-border);border-radius:8px">
+      <div style="font-size:11px;font-weight:700;color:var(--coral);letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px">Imediato</div>
+      <p style="font-size:12.5px;color:var(--text);line-height:1.6;margin:0"><strong>Rec 2:</strong> corrigir o texto das telas de sucesso para distinguir pagamento com saldo externo vs. Caixinha. Alteração de copy — sem custo de engenharia relevante.</p>
+    </div>
+    <div style="padding:14px 16px;background:var(--surface);border:1px solid var(--amber-border);border-radius:8px">
+      <div style="font-size:11px;font-weight:700;color:var(--amber);letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px">Curto prazo</div>
+      <p style="font-size:12.5px;color:var(--text);line-height:1.6;margin:0"><strong>Rec 8:</strong> validar hipóteses com BAs antes de investir em produto. Resultados calibram a prioridade de Recs 1, 3 e 6 com evidência operacional.</p>
+    </div>
+    <div style="padding:14px 16px;background:var(--surface);border:1px solid var(--teal-border);border-radius:8px">
+      <div style="font-size:11px;font-weight:700;color:var(--teal);letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px">Médio prazo</div>
+      <p style="font-size:12.5px;color:var(--text);line-height:1.6;margin:0"><strong>Recs 1, 3, 6:</strong> redesenho da interface da Caixinha, régua de comunicação proativa por evento e materiais específicos para o LG.</p>
+    </div>
+  </div>
+
+</div></div><!-- end pane-resumo -->
+
 <!-- ═══════════════════════════════════════════════════ QUANTI ═══ -->
-<div class="pane active" id="pane-quanti">
+<div class="pane" id="pane-quanti">
 <div class="dash">
   <div class="filters">
     <div class="filter-group">
@@ -919,10 +1099,10 @@ body.has-sidenav .dash{margin-left:200px}
         <div class="sc-body">
           <div class="qb">"Fiquei meio para baixo" — ao descobrir que não era limite concedido</div>
           <div class="sc-section">🎯 Achado central</div>
-          Gap de expectativa confirmado, superado pela necessidade funcional concreta: o PSN só aceita crédito. Uso ultra-focado — crédito = PlayStation, débito = rua. Camila conduziu a abertura de conta. 13 negadas automáticas do Google One não percebidas.
+          Gap de expectativa confirmado, superado pela necessidade funcional concreta: o PSN só aceita crédito. Uso ultra-focado — crédito = PlayStation, débito = rua. Camila conduziu a abertura de conta. 45 negadas automáticas não percebidas.
           <div class="sc-section">🚧 Barreiras</div>
           <span class="sc-pill sc-pill--bad">Autoseize desconhecido</span>
-          <span class="sc-pill sc-pill--bad">13 negadas automáticas não percebidas</span>
+          <span class="sc-pill sc-pill--bad">45 negadas automáticas não percebidas</span>
           <span class="sc-pill sc-pill--bad">Medo de vergonha ao usar na rua</span>
           <div class="sc-section">✅ Canal LG</div>
           LG engajada — pesquisou, conduziu abertura, monitora transações. Sugere comunicação direta ao menor via notificações.
@@ -940,7 +1120,7 @@ body.has-sidenav .dash{margin-left:200px}
         <div class="sc-body">
           <div class="qb">"Eu já tenho um cartão virtual de débito — é praticamente a mesma coisa"</div>
           <div class="sc-section">🎯 Achado central</div>
-          Rejeição consciente e fundamentada — entende o produto e o descarta como "crédito falso". Faz 18 em maio: produto já obsoleto. Inversão de papéis — Nicole ensina Regina a usar o app.
+          Rejeição consciente e fundamentada — entende o produto e o descarta por entender que "não é crédito de verdade". Faz 18 em maio: produto já obsoleto. Inversão de papéis — Nicole ensina Regina a usar o app.
           <div class="sc-section">🚧 Barreiras</div>
           <span class="sc-pill sc-pill--bad">Rejeição consciente do modelo</span>
           <span class="sc-pill sc-pill--bad">Sem vantagem percebida vs débito</span>
@@ -1042,8 +1222,8 @@ body.has-sidenav .dash{margin-left:200px}
 </div></div><!-- end pane-overview -->
 
   <!-- COMPARISON TABLE -->
-<div class="pane" id="pane-table"><div class="dash">
-  <div class="section" id="st-tabela">Comparativo de jornadas</div>
+<div class="pane" id="pane-table">id="pane-table"><div class="dash">
+  <div class="section" id="st-tabela">Jornada</div>
 
     <div class="tbl-filters">
       <div class="filter-group">
@@ -1096,9 +1276,9 @@ body.has-sidenav .dash{margin-left:200px}
 
     <tr data-dim="descoberta" class="dim-first-row"><td class="dim-col"><span style="display:block;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#7A4F00;margin-bottom:4px;font-family:'JetBrains Mono',monospace">🔍 Descoberta</span>Como chegou ao produto</td>
       <td>LG pesquisou no Google e conduziu abertura no celular do filho</td>
-      <td>Tentou solicitar crédito convencional — banco ofereceu ABCard como alternativa</td>
+      <td>Buscava crédito convencional, viu oferta no app</td>
       <td>Reportagem na TV; abriu pelo celular da mãe (que já tinha Nubank)</td>
-      <td>LG encontrou no app e repassou — U18 nunca viu por conta própria</td>
+      <td>LG recebeu comms e conversou com a filha — U18 nunca viu por conta própria</td>
       <td><span class="hl">TikTok</span> — meses antes da oferta aparecer no app</td>
       <td>Viu no app por curiosidade</td>
     </tr>
@@ -1113,8 +1293,8 @@ body.has-sidenav .dash{margin-left:200px}
     </tr>
 
     <tr data-dim="compreensao" class="dim-first-row"><td class="dim-col"><span style="display:block;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#6B5800;margin-bottom:4px;font-family:'JetBrains Mono',monospace">🧠 Compreensão</span>Entendimento do limite</td>
-      <td><span class="dot dy"></span>Correto</td>
-      <td><span class="dot dy"></span>Correto — chegou sozinha pelo app</td>
+      <td><span class="dot dy"></span>Correto — a mãe o guiou pelo processo</td>
+      <td><span class="dot dy"></span>Correto — aprendeu sozinha pelo app</td>
       <td><span class="dot dp"></span>Parcial — entendeu ao ser explicado, rejeitou imediatamente</td>
       <td><span class="dot dp"></span>Parcial — acredita que todo valor fica travado sem resgate</td>
       <td><span class="dot dy"></span>Mais sólido do campo</td>
@@ -1176,16 +1356,16 @@ body.has-sidenav .dash{margin-left:200px}
     </tr>
 
     <tr data-dim="uso" class="dim-first-row"><td class="dim-col"><span style="display:block;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#1E3A8A;margin-bottom:4px;font-family:'JetBrains Mono',monospace">📱 Jornada de uso</span>Primeiro depósito</td>
-      <td>R$50 — teste; compra de R$3 para ver se funcionava</td>
+      <td>R$5 reais — teste; compra na farmácia da avó para ver se funcionava</td>
       <td>R$4,50 — duas compras pontuais; resgatou restante imediatamente por medo</td>
       <td>Nunca depositou</td>
       <td>Nunca depositou</td>
-      <td>R$50 — teste deliberado e planejado</td>
-      <td>Ativou mas nunca depositou — não reconhece ter ativado</td>
+      <td>R$50 — achou que esse era o valor mínimo; teste deliberado e planejado</td>
+      <td>Ativou mas tem um único depósito de R$1, que não relatou na entrevista — não reconhece ter ativado</td>
     </tr>
 
     <tr data-dim="uso"><td class="dim-col"><span style="display:block;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#1E3A8A;margin-bottom:4px;font-family:'JetBrains Mono',monospace">📱 Jornada de uso</span>Uso atual</td>
-      <td>Ativo — PSN recorrente; evita crédito na rua por medo de vergonha</td>
+      <td>Ativo — PSN recorrente; evita crédito na rua por medo de ter compra negada e passar vergonha</td>
       <td>Inativo — uso único e pontual; sem intenção de reuso</td>
       <td>Nunca usou</td>
       <td>Nunca usou</td>
@@ -1194,11 +1374,11 @@ body.has-sidenav .dash{margin-left:200px}
     </tr>
 
     <tr data-dim="uso"><td class="dim-col"><span style="display:block;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#1E3A8A;margin-bottom:4px;font-family:'JetBrains Mono',monospace">📱 Jornada de uso</span>Compras negadas</td>
-      <td>13 negativas do Google One — não percebe como tais (cobranças automáticas)</td>
+      <td>45 negativas — não percebe como tais</td>
       <td>Nenhuma com ABCard</td>
       <td>Nenhuma (nunca usou)</td>
       <td>Nenhuma (nunca usou)</td>
-      <td>Nenhuma ativa; mesmo padrão de automáticas do Google não mapeado</td>
+      <td>13 negativas do Google One — não percebe como tais (cobranças automáticas)</td>
       <td>Episódio de cartão não passando — problema de habilitação, não saldo</td>
     </tr>
 
@@ -1206,7 +1386,7 @@ body.has-sidenav .dash{margin-left:200px}
       <td><span class="dot dz"></span>Não menciona espontaneamente</td>
       <td><span class="dot dz"></span>Reconhece superficialmente — não motiva; faz 18 em maio</td>
       <td><span class="dot dz"></span>Pensa vagamente, sem ação estruturada</td>
-      <td><span class="dot dz"></span>Perfil orientado a futuro — nunca foi apresentado ao argumento</td>
+      <td><span class="dot dz"></span>Perfil orientado a futuro nos estudos, mas não se reflete no perfil financeiro</td>
       <td><span class="dot dy"></span>Sim — único U18 que menciona score espontaneamente</td>
       <td><span class="dot dp"></span>Edneid menciona após esclarecimento — não o próprio João Victor</td>
     </tr>
@@ -1224,7 +1404,7 @@ body.has-sidenav .dash{margin-left:200px}
       <td>—</td>
       <td>Rendimento da caixinha (100% CDI) — desconhecia</td>
       <td>Cartão físico — única reação positiva genuína da sessão</td>
-      <td>"O ABCard não permite dívida por design" — sua objeção principal é falsa</td>
+      <td>"O cartão para menores não permite dívida por design" — sua objeção principal é falsa</td>
       <td>—</td>
       <td>Explicação do mecanismo de pagamento — barreira desaparece com uma frase</td>
     </tr>
@@ -2179,7 +2359,7 @@ window.addEventListener('scroll', highlightNav, {passive:true});
 
 renderAll();
 renderNegadas();
-buildSideNav('quanti');
+buildSideNav('resumo');
 
 </script>
 </body>
